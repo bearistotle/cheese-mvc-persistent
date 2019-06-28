@@ -57,6 +57,7 @@ public class CheeseController {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Cheese");
+            model.addAttribute("cheese", newCheese);
             return "cheese/add";
         }
 

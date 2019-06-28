@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+    <div class="row"></div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <h1 th:text="${title}">Menus</h1>
+            <nav th:replace="fragments :: navigation"></nav>
+            <br />
+            <table class="table table-striped table-hover">
+                <tr th:each="menu : ${menus}">
+                    <th>Name</th>
+                    <td th:text="${menu.name}"></td>
+                </tr>
+            </table>
+            <br />
+            <a class="btn btn-info" href="/menu/add">Add Menu</a>
+        </div>
+    <div class="col-sm-2"></div>
+</body>
+</html>
+

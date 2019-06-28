@@ -21,6 +21,9 @@
                 <td th:text="${cheese.category.name}"></td>
             </tr>
         </table>
+        <br />
+        <a th:href="@{/cheese/add}" class="btn btn-success">Add</a>
+        <a th:href="@{/cheese/remove}" class="btn btn-danger">Remove</a>
     </div>
     <div class="col-sm-2"></div>
 </div>
